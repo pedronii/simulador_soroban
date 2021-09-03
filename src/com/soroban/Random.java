@@ -14,7 +14,7 @@ public class Random {
     }
 
     public int getMax() {
-        return min;
+        return max;
     }
 
     public void setMax(int max) {
