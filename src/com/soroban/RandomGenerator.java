@@ -3,28 +3,32 @@ import java.util.Random;
 
 public class RandomGenerator {
 
-    private int max;
-    private int min;
+    public static final int UNIT = 9;
+    public static final int TEN = 99;
+    public static final int HUNDRED = 999;
+    public static final int THOUSAND = 9999;
+    public static final int MILLION = 99999;
 
-    public int getMin() {
-        return min;
+    private static final Random r = new Random(System.currentTimeMillis());
+
+    public static int generateUnits() {
+        return r.nextInt(UNIT);
     }
 
-    public void setMin(int min) {
-        this.min = min;
+    public static int generateTens() {
+        return r.nextInt(TEN);
     }
 
-    public int getMax() {
-        return max;
+    public static int generateHundreds() {
+        return r.nextInt(HUNDRED);
     }
 
-    public void setMax(int max) {
-        this.max = max;
+    public static int generateThousands() {
+        return r.nextInt(THOUSAND);
     }
 
-    public int generateUnits() {
-        Random r = new Random();
-        return r.nextInt(9);
+    public static int generateMillion() {
+        return r.nextInt(MILLION);
     }
 
 }
