@@ -2,12 +2,15 @@ package com.soroban;
 
 public class Operators {
 
-    public static void sum(String[] args) {
-
+    private Operators() {
+        Operators operator = new Operators();
     }
 
-    public static void sub(String[] args) {
-
+    public static int sum(int num1, int num2) {
+        return num1 + num2;
     }
 
+    public static int sub(int num1, int num2) {
+        return num1 - num2;
+    }
 }
