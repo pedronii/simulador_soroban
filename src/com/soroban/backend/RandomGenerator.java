@@ -1,4 +1,4 @@
-package com.soroban;
+package com.soroban.backend;
 import java.util.Random;
 
 public class RandomGenerator {
