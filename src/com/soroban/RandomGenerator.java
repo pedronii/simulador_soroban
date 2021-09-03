@@ -11,25 +11,36 @@ public class RandomGenerator {
 
     private static final Random r = new Random(System.currentTimeMillis());
 
-    public static int generateUnits() {
-        return r.nextInt(UNIT);
-    }
+    public static int[] generate(String ord) {
+        int num[] = new int[2];
 
-    public static int generateTens() {
-        return r.nextInt(TEN);
-    }
+        switch (ord) {
+            case "UNIT":
+                num[0] = r.nextInt(UNIT);
+                num[1] = r.nextInt(UNIT);
+                break;
 
-    public static int generateHundreds() {
-        return r.nextInt(HUNDRED);
-    }
+            case "TEN":
+                num[0] = r.nextInt(TEN);
+                num[1] = r.nextInt(TEN);
+                break;
 
-    public static int generateThousands() {
-        return r.nextInt(THOUSAND);
-    }
+            case "HUNDRED":
+                num[0] = r.nextInt(HUNDRED);
+                num[1] = r.nextInt(HUNDRED);
+                break;
 
-    public static int generateMillion() {
-        return r.nextInt(MILLION);
-    }
+            case "THOUSAND":
+                num[0] = r.nextInt(THOUSAND);
+                num[1] = r.nextInt(THOUSAND);
+                break;
 
+            case "MILLION":
+                num[0] = r.nextInt(MILLION);
+                num[1] = r.nextInt(MILLION);
+                break;
+        }
+        return num;
+    }
 }
 
