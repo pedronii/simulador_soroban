@@ -1,13 +1,13 @@
 package com.soroban;
 
 public class Operators {
-
-    public static void sum(String[] args) {
-
+    
+    public static int sum(int op1, int op2) {
+        return (op1 + op2);
     }
-
-    public static void sub(String[] args) {
-
+    
+    public static int sub(int op1, int op2) {
+        return (op1 - op2);
     }
 
 }
