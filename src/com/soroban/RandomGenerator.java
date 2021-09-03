@@ -1,6 +1,7 @@
 package com.soroban;
+import java.util.Random;
 
-public class Random {
+public class RandomGenerator {
 
     private int max;
     private int min;
@@ -14,16 +15,17 @@ public class Random {
     }
 
     public int getMax() {
-        return min;
+        return max;
     }
 
     public void setMax(int max) {
         this.max = max;
     }
 
-    public int generate(int min, int max) {
-        int rand = (int) Math.floor(Math.random() * (max - min + 1) + min);
-        return rand;
+    public int generateUnits() {
+        Random r = new Random();
+        return r.nextInt(9);
     }
 
 }
+
