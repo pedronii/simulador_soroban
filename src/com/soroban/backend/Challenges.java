@@ -1,3 +1,5 @@
+package com.soroban.backend;
+
 import java.util.Scanner;
 
 public class Challenges{
@@ -20,20 +22,20 @@ public class Challenges{
         this.soroban = soroban;
     }
     
-    public void readNumber(){
+    public String readNumber(){
 
-        //tem q trocar por uma função q gere um numero aleatorio
+        //tem q trocar por uma funÃ§Ã£o q gere um numero aleatorio
         correctValue = 42;
 
         soroban.setState(correctValue);
 
-        soroban.printState();
+        return soroban.printState();
 
     }
 
     public void writeNumber(){
 
-        //tem q trocar por uma função q gere um numero aleatorio
+        //tem q trocar por uma funÃ§Ã£o q gere um numero aleatorio
         correctValue = 42;
 
         System.out.print(correctValue);
@@ -50,7 +52,7 @@ public class Challenges{
 
     public void sumNumber(){
 
-        //tem q trocar por uma função q gere um numero aleatorio
+        //tem q trocar por uma funÃ§Ã£o q gere um numero aleatorio
         int number1 = 24;
         int number2 = 69;
 
@@ -65,7 +67,7 @@ public class Challenges{
 
     public void diffNumber(){
 
-        //tem q trocar por uma função q gere um numero aleatorio
+        //tem q trocar por uma funÃ§Ã£o q gere um numero aleatorio
         int number1 = 24;
         int number2 = 69;
 
@@ -80,7 +82,7 @@ public class Challenges{
 
     public void multNumber(){
 
-        //tem q trocar por uma função q gere um numero aleatorio
+        //tem q trocar por uma funÃ§Ã£o q gere um numero aleatorio
         int number1 = 24;
         int number2 = 69;
 
@@ -95,7 +97,7 @@ public class Challenges{
 
     public void divNumber(){
 
-        //tem q trocar por uma função q gere um numero aleatorio
+        //tem q trocar por uma funÃ§Ã£o q gere um numero aleatorio
         int number1 = 24;
         int number2 = 69;
 
