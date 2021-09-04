@@ -1,9 +1,10 @@
+package com.soroban.backend;
+
 import java.util.Scanner;
 
 public class Challenges{
 
     private Soroban soroban;
-
     private int correctValue;
 
     public Challenges(Soroban soroban){

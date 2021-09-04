@@ -1,3 +1,5 @@
+package com.soroban.backend;
+
 public class Soroban {
     
     public Column[] columns;
@@ -37,34 +39,27 @@ public class Soroban {
     }
 
     public void printState(){
-
         int godan[] = new int[12];
         int ichidan[] = new int[12];
 
 
         //Le todos os Ichidans e Godans
         for(int i = 0; i < 12; i++){
-
             godan[i] = columns[i].getGodan();
             ichidan[i] = columns[i].getIchidan();
-
         }
 
         //Imprime os Godans
         for(int i = 0; i < 12; i++){
-
             if(godan[i] == 0) System.out.print("|X");
             else System.out.print("| ");
-
         }
 
         System.out.print("|\n");
 
         for(int i = 0; i < 12; i++){
-
             if(godan[i] == 1) System.out.print("|X");
             else System.out.print("| ");
-
         }
 
         //Imprime a linha separatoria

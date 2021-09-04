@@ -1,5 +1,6 @@
 package com.soroban.gui;
 
+import com.soroban.backend.RandomGenerator;
 import com.soroban.gui.GUI;
 
 import java.awt.event.ActionEvent;
@@ -25,6 +26,7 @@ public class Utilizar extends JPanel {
 	private JButton btnUtilizarVoltar;
 	private JTextField txfUtilizarOperando1;
 	private JTextField txfUtilizarOperando2;
+	private int numRandom;
 	
 	public Utilizar(GUI gui) throws ParseException {
 		super();
@@ -42,46 +44,84 @@ public class Utilizar extends JPanel {
 		btnUtilizarVoltar.setBounds(62, 390, 183, 51);
 		this.add(btnUtilizarVoltar);
 		
-		JLabel lblOperacaoMatematica = new JLabel("Opera\u00E7\u00E3o Matem\u00E1tica");
+		JLabel lblOperacaoMatematica = new JLabel("Modo: ");
 		lblOperacaoMatematica.setFont(new Font("Leelawadee UI", Font.BOLD, 24));
 		lblOperacaoMatematica.setBounds(75, 60, 273, 44);
 		add(lblOperacaoMatematica);
 		
-		JLabel lblGrandezaDosNumeros = new JLabel("Grandeza dos N\u00FAmeros");
+		JLabel lblGrandezaDosNumeros = new JLabel("Classe numérica");
 		lblGrandezaDosNumeros.setFont(new Font("Leelawadee UI", Font.BOLD, 24));
 		lblGrandezaDosNumeros.setBounds(75, 120, 273, 44);
 		add(lblGrandezaDosNumeros);
 		
-		JLabel lblOperando_1 = new JLabel("Operando 1");
+		JLabel lblOperando_1 = new JLabel("Primeiro operando: ");
 		lblOperando_1.setFont(new Font("Leelawadee UI", Font.BOLD, 24));
 		lblOperando_1.setBackground(new Color(0, 0, 0));
 		lblOperando_1.setForeground(new Color(0, 0, 0));
 		lblOperando_1.setBounds(75, 180, 273, 44);
 		add(lblOperando_1);
 		
-		JLabel lblOperando_2 = new JLabel("Operando 2");
+		JLabel lblOperando_2 = new JLabel("Segundo operando: ");
 		lblOperando_2.setFont(new Font("Leelawadee UI", Font.BOLD, 24));
 		lblOperando_2.setBounds(75, 240, 273, 44);
 		add(lblOperando_2);
 		
 		JComboBox<String> comboBoxOperacao = new JComboBox<String>();
-		comboBoxOperacao.setModel(new DefaultComboBoxModel<String>(new String[] {"Somar", "Subtrair", "Multiplicar", "Dividir"}));
+		comboBoxOperacao.setModel(new DefaultComboBoxModel<String>(
+				new String[] {"Somar", "Subtrair", "1° Desafio", "2° Desafio"}));
 		comboBoxOperacao.setBounds(450, 60, 166, 44);
 		add(comboBoxOperacao);
 		
-		//Formatação de texto para apenas inteiros
+		//FormataÃ§Ã£o de texto para apenas inteiros
 		NumberFormatter formatter = new NumberFormatter();
 		formatter.setValueClass(Integer.class);
 		formatter.setMinimum(0);
 		formatter.setMaximum(135);
-		
+
+		JComboBox<String> comboBoxGrandeza = new JComboBox<String>();
+		comboBoxGrandeza.setModel(new DefaultComboBoxModel<String>(
+				new String[] {"Unidades", "Dezenas", "Centenas", "Milhares", "Centena de Milhares", "Milhões"}));
+		comboBoxGrandeza.setBounds(450, 120, 166, 44);
+		add(comboBoxGrandeza);
+
 		txfUtilizarOperando1 = new JFormattedTextField(formatter){
 		    @Override
-		    protected void processFocusEvent(final FocusEvent e) {
-		        if (getText() == null || getText().isEmpty()) {
-		            setValue(0);
-		        }
-		        super.processFocusEvent(e);
+		    protected void processFocusEvent(final FocusEvent f) {
+		    	switch(comboBoxGrandeza.getSelectedItem().toString()) {
+
+					case "Unidades":
+						numRandom  = RandomGenerator.generate("UNIT");
+						setValue(numRandom);
+						break;
+
+					case "Dezenas":
+						numRandom  = RandomGenerator.generate("DOZEN");
+						setValue(numRandom);
+						break;
+
+					case "Centenas":
+						numRandom  = RandomGenerator.generate("HUNDRED");
+						setValue(numRandom);
+						break;
+
+					case "Milhares":
+						numRandom  = RandomGenerator.generate("THOUSAND");
+						setValue(numRandom);
+						break;
+
+					case "Centenas de Milhares":
+						numRandom  = RandomGenerator.generate("HUNDRED THOUSAND");
+						setValue(numRandom);
+						break;
+
+					case "Milhões":
+						numRandom  = RandomGenerator.generate("MILLION");
+						setValue(numRandom);
+						break;
+
+				}
+
+		        super.processFocusEvent(f);
 		    }
 		};
 		
@@ -90,14 +130,51 @@ public class Utilizar extends JPanel {
 		add(txfUtilizarOperando1);
 		txfUtilizarOperando1.setColumns(10);
 		
-		txfUtilizarOperando2 = new JFormattedTextField(formatter);
+		txfUtilizarOperando2 = new JFormattedTextField(formatter) {
+		@Override
+		protected void processFocusEvent(final FocusEvent e) {
+			switch(comboBoxGrandeza.getSelectedItem().toString()) {
+
+				case "Unidades":
+					numRandom  = RandomGenerator.generate("UNIT");
+					setValue(numRandom);
+					break;
+
+				case "Dezenas":
+					numRandom  = RandomGenerator.generate("DOZEN");
+					setValue(numRandom);
+					break;
+
+				case "Centenas":
+					numRandom  = RandomGenerator.generate("HUNDRED");
+					setValue(numRandom);
+					break;
+
+				case "Milhares":
+					numRandom  = RandomGenerator.generate("THOUSAND");
+					setValue(numRandom);
+					break;
+
+				case "Centenas de Milhares":
+					numRandom  = RandomGenerator.generate("HUNDRED THOUSAND");
+					setValue(numRandom);
+					break;
+
+				case "Milhões":
+					numRandom  = RandomGenerator.generate("MILLION");
+					setValue(numRandom);
+					break;
+			}
+			super.processFocusEvent(e);
+		}
+	};
 		
 		txfUtilizarOperando2.setFont(new Font("Leelawadee UI", Font.BOLD, 24));
 		txfUtilizarOperando2.setBounds(450, 240, 165, 44);
 		add(txfUtilizarOperando2);
 		txfUtilizarOperando2.setColumns(10);
 		
-		JButton btnUtilizarPassos = new JButton("com.soroban.gui.Passos");
+		JButton btnUtilizarPassos = new JButton("Passos");
 		btnUtilizarPassos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				gui.resetPasso();
@@ -115,11 +192,6 @@ public class Utilizar extends JPanel {
 		});
 		btnUtilizarCalcular.setBounds(552, 390, 183, 51);
 		add(btnUtilizarCalcular);
-		
-		JComboBox<String> comboBoxGrandeza = new JComboBox<String>();
-		comboBoxGrandeza.setModel(new DefaultComboBoxModel<String>(new String[] {"10^1", "10^2", "10^3", "10^4", "10^5", "10^6", "10^7", "10^8"}));
-		comboBoxGrandeza.setBounds(450, 120, 166, 44);
-		add(comboBoxGrandeza);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(10, 337, 780, 8);

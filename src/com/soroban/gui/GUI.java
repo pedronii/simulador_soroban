@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class GUI {
 	
-	private JFrame frmAbaco;
+	private final JFrame frmAbaco;
 	
 	public JPanel historiaPanel;
 	public JPanel homePanel;
@@ -16,6 +16,7 @@ public class GUI {
 	public JPanel comoUtilizarPanel;
 	public JPanel passosPanel;
 	public JPanel calculoFinalPanel;
+	public JPanel desafioPanel;
 	private int passoAtual;
 	
 	public void resetPasso() {
@@ -54,13 +55,10 @@ public class GUI {
 		comoUtilizarPanel = new ComoUtilizar(this);
 		passosPanel = new Passos(this);
 		calculoFinalPanel = new CalculoFinal(this);
+		//desafioPanel = new Desafio(this);
 		
-		
+
 		frmAbaco.getContentPane().add(homePanel, BorderLayout.CENTER);
 		frmAbaco.setVisible(true);
-	}
-	
-	public static void main(String[] args) throws ParseException {
-		GUI gui = new GUI();
 	}
 }

@@ -1,3 +1,5 @@
+package com.soroban.backend;
+
 public class Column {
     
     // Assume valores entre 0 e 4

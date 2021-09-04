@@ -4,43 +4,37 @@ import java.util.Random;
 public class RandomGenerator {
 
     public static final int UNIT = 9;
-    public static final int TEN = 99;
+    public static final int DOZEN = 99;
     public static final int HUNDRED = 999;
     public static final int THOUSAND = 9999;
-    public static final int MILLION = 99999;
+    public static final int HUNDRED_THOUSAND = 99999;
+    public static final int MILLION = 999999;
+
 
     private static final Random r = new Random(System.currentTimeMillis());
 
-    public static int[] generate(String ord) {
-        int num[] = new int[2];
+    private RandomGenerator() {
+
+    }
+
+    public static int generate(String ord) {
 
         switch (ord) {
             case "UNIT":
-                num[0] = r.nextInt(UNIT);
-                num[1] = r.nextInt(UNIT);
-                break;
-
-            case "TEN":
-                num[0] = r.nextInt(TEN);
-                num[1] = r.nextInt(TEN);
-                break;
-
+                return r.nextInt(UNIT);
+            case "DOZEN":
+                return r.nextInt(DOZEN);
             case "HUNDRED":
-                num[0] = r.nextInt(HUNDRED);
-                num[1] = r.nextInt(HUNDRED);
-                break;
-
+                return r.nextInt(HUNDRED);
             case "THOUSAND":
-                num[0] = r.nextInt(THOUSAND);
-                num[1] = r.nextInt(THOUSAND);
-                break;
-
+                return r.nextInt(THOUSAND);
+            case "HUNDRED THOUSAND":
+                return r.nextInt(HUNDRED_THOUSAND);
             case "MILLION":
-                num[0] = r.nextInt(MILLION);
-                num[1] = r.nextInt(MILLION);
-                break;
+                return r.nextInt(MILLION);
         }
-        return num;
+        return -1;
     }
+
 }
 
