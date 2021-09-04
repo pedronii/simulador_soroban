@@ -69,7 +69,7 @@ public class Utilizar extends JPanel {
 		comboBoxOperacao.setBounds(450, 60, 166, 44);
 		add(comboBoxOperacao);
 		
-		//Formatação de texto para apenas inteiros
+		//FormataÃ§Ã£o de texto para apenas inteiros
 		NumberFormatter formatter = new NumberFormatter();
 		formatter.setValueClass(Integer.class);
 		formatter.setMinimum(0);
@@ -97,7 +97,7 @@ public class Utilizar extends JPanel {
 		add(txfUtilizarOperando2);
 		txfUtilizarOperando2.setColumns(10);
 		
-		JButton btnUtilizarPassos = new JButton("com.soroban.gui.Passos");
+		JButton btnUtilizarPassos = new JButton("Passos");
 		btnUtilizarPassos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				gui.resetPasso();

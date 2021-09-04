@@ -28,16 +28,16 @@ public class Home extends JPanel {
 		btnHomeHistoria.setBounds(486, 331, 254, 88);
 		this.add(btnHomeHistoria);
 		
-		JButton btnHomeUtilizar = new JButton("com.soroban.gui.Utilizar");
+		JButton btnHomeUtilizar = new JButton("Utilizar");
 		btnHomeUtilizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				gui.switchPanel(gui.utilizarPanel);
 			}
 		});
-		btnHomeUtilizar.setBounds(272, 211, 254, 88);
+		btnHomeUtilizar.setBounds(60, 212, 254, 88);
 		this.add(btnHomeUtilizar);
 		
-		JButton btnHomeComoUtilizar = new JButton("Como com.soroban.gui.Utilizar");
+		JButton btnHomeComoUtilizar = new JButton("Como Utilizar");
 		btnHomeComoUtilizar.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -46,5 +46,15 @@ public class Home extends JPanel {
 		});
 		btnHomeComoUtilizar.setBounds(60, 331, 254, 88);
 		this.add(btnHomeComoUtilizar);
+		
+		JButton btnDesafio = new JButton("Desafio");
+		btnDesafio.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				gui.switchPanel(gui.desafioPanel);
+			}
+		});
+		btnDesafio.setBounds(486, 212, 254, 88);
+		add(btnDesafio);
 	}
 }

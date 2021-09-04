@@ -1,3 +1,5 @@
+package com.soroban.backend;
+
 import java.util.Scanner;
 
 public class Challenges{
