@@ -23,7 +23,7 @@ public class Challenges {
 
     public void writeNumber(){
 
-        this.correctState
+        //this.correctState
 
     }
 

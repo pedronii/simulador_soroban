@@ -1,36 +1,36 @@
 public class Column {
     
     // Assume valores entre 0 e 4
-    private int Ichidan;
+    public int ichidan;
     // Assume valores 0 ou 1
-    private int Godan;
+    private int godan;
 
     public void setValue(int value) {
 
         if(value < 5){
 
-            this.Godan = 0;
-            this.Ichidan = value;
+            this.godan = 0;
+            this.ichidan = value;
 
         } else{
 
-            this.Godan = 1;
-            this.Ichidan = value - 5;
+            this.godan = 1;
+            this.ichidan = value - 5;
 
         }
 
     }
 
     public int getGodan() {
-        return Godan;
+        return godan;
     }
 
     public int getIchidan() {
-        return Ichidan;
+        return ichidan;
     }
 
     public int getValue(){
-        return Godan + Ichidan;
+        return godan + ichidan;
     }
 
 }
