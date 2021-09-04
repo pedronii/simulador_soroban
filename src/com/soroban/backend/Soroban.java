@@ -1,6 +1,6 @@
 public class Soroban {
     
-    public Column columns[];
+    public Column[] columns;
 
     public Soroban(){
 
@@ -11,6 +11,8 @@ public class Soroban {
     public void setState(int value){
 
         for(int i = 0; i < 12; i++){
+
+            columns[i] = new Column();
 
             columns[i].setValue(value % 10);
 
@@ -51,76 +53,76 @@ public class Soroban {
         //Imprime os Godans
         for(int i = 0; i < 12; i++){
 
-            if(godan[i] == 0) System.out.println("[X]");
-            else System.out.println("[ ]");
+            if(godan[i] == 0) System.out.print("[X]");
+            else System.out.print("[ ]");
 
         }
 
-        System.out.println("\n");
+        System.out.print("\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(godan[i] == 1) System.out.println("[X]");
-            else System.out.println("[ ]");
+            if(godan[i] == 1) System.out.print("[X]");
+            else System.out.print("[ ]");
 
         }
 
         //Imprime a linha separatoria
-        System.out.println("\n");
+        System.out.print("\n");
 
         for(int i = 0; i < 12; i++){
 
-            System.out.println("---");
+            System.out.print("---");
 
         }
         
         //Imprime os Ichidans
-        System.out.println("\n");
+        System.out.print("\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 0) System.out.println("[ ]");
-            else System.out.println("[X]");
+            if(ichidan[i] == 0) System.out.print("[ ]");
+            else System.out.print("[X]");
 
         }
 
-        System.out.println("\n");
+        System.out.print("\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 1) System.out.println("[ ]");
-            else System.out.println("[X]");
+            if(ichidan[i] == 1) System.out.print("[ ]");
+            else System.out.print("[X]");
 
         }
 
-        System.out.println();
+        System.out.print("\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 2) System.out.println("[ ]");
-            else System.out.println("[X]");
+            if(ichidan[i] == 2) System.out.print("[ ]");
+            else System.out.print("[X]");
 
         }
 
-        System.out.println();
+        System.out.print("\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 3) System.out.println("[ ]");
-            else System.out.println("[X]");
+            if(ichidan[i] == 3) System.out.print("[ ]");
+            else System.out.print("[X]");
 
         }
 
-        System.out.println();
+        System.out.print("\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 4) System.out.println("[ ]");
-            else System.out.println("[X]");
+            if(ichidan[i] == 4) System.out.print("[ ]");
+            else System.out.print("[X]");
 
         }
 
-        System.out.println();
+        System.out.print("\n");
 
     }
 
