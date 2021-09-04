@@ -53,87 +53,72 @@ public class Soroban {
         //Imprime os Godans
         for(int i = 0; i < 12; i++){
 
-            if(godan[i] == 0) System.out.print("[X]");
-            else System.out.print("[ ]");
+            if(godan[i] == 0) System.out.print("|X");
+            else System.out.print("| ");
 
         }
 
-        System.out.print("\n");
+        System.out.print("|\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(godan[i] == 1) System.out.print("[X]");
-            else System.out.print("[ ]");
+            if(godan[i] == 1) System.out.print("|X");
+            else System.out.print("| ");
 
         }
 
         //Imprime a linha separatoria
-        System.out.print("\n");
+        System.out.print("|\n");
 
-        for(int i = 0; i < 12; i++){
 
-            System.out.print("---");
-
-        }
+        System.out.print("-------------------------\n");
         
         //Imprime os Ichidans
-        System.out.print("\n");
-
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 0) System.out.print("[ ]");
-            else System.out.print("[X]");
+            if(ichidan[i] == 0) System.out.print("| ");
+            else System.out.print("|X");
 
         }
 
-        System.out.print("\n");
+        System.out.print("|\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 1) System.out.print("[ ]");
-            else System.out.print("[X]");
+            if(ichidan[i] == 1) System.out.print("| ");
+            else System.out.print("|X");
 
         }
 
-        System.out.print("\n");
+        System.out.print("|\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 2) System.out.print("[ ]");
-            else System.out.print("[X]");
+            if(ichidan[i] == 2) System.out.print("| ");
+            else System.out.print("|X");
 
         }
 
-        System.out.print("\n");
+        System.out.print("|\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 3) System.out.print("[ ]");
-            else System.out.print("[X]");
+            if(ichidan[i] == 3) System.out.print("| ");
+            else System.out.print("|X");
 
         }
 
-        System.out.print("\n");
+        System.out.print("|\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 4) System.out.print("[ ]");
-            else System.out.print("[X]");
+            if(ichidan[i] == 4) System.out.print("| ");
+            else System.out.print("|X");
 
         }
 
-        System.out.print("\n");
+        System.out.print("|\n");
 
-    }
-
-    public static void main(String[] args) {
-
-        Soroban soroban = new Soroban();
-    
-        soroban.setState(52);
-
-        soroban.printState();
-        
     }
 
 }
