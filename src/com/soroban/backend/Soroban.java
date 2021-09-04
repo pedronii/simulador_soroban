@@ -1,3 +1,5 @@
+package com.soroban.backend;
+
 public class Soroban {
     
     public Column[] columns;
@@ -36,8 +38,8 @@ public class Soroban {
 
     }
 
-    public void printState(){
-
+    public String printState(){
+    	StringBuilder state = new StringBuilder();
         int godan[] = new int[12];
         int ichidan[] = new int[12];
 
@@ -53,31 +55,40 @@ public class Soroban {
         //Imprime os Godans
         for(int i = 0; i < 12; i++){
 
-            if(godan[i] == 0) System.out.print("|X");
-            else System.out.print("| ");
+            if(godan[i] == 0) state.append("|X");
+            else state.append("| ");
 
         }
 
-        System.out.print("|\n");
+        state.append("|\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(godan[i] == 1) System.out.print("|X");
-            else System.out.print("| ");
+            if(godan[i] == 1) state.append("|X");
+            else state.append("| ");
 
         }
 
         //Imprime a linha separatoria
-        System.out.print("|\n");
+        state.append("|\n");
 
 
-        System.out.print("-------------------------\n");
+        state.append("-------------------------\n");
         
         //Imprime os Ichidans
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 0) System.out.print("| ");
-            else System.out.print("|X");
+            if(ichidan[i] == 0) state.append("| ");
+            else state.append("|X");
+
+        }
+
+        state.append("|\n");
+
+        for(int i = 0; i < 12; i++){
+
+            if(ichidan[i] == 1) state.append("| ");
+            else state.append("|X");
 
         }
 
@@ -85,41 +96,33 @@ public class Soroban {
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 1) System.out.print("| ");
-            else System.out.print("|X");
+            if(ichidan[i] == 2) state.append("| ");
+            else state.append("|X");
 
         }
 
-        System.out.print("|\n");
+        state.append("|\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 2) System.out.print("| ");
-            else System.out.print("|X");
+            if(ichidan[i] == 3) state.append("| ");
+            else state.append("|X");
 
         }
 
-        System.out.print("|\n");
+        state.append("|\n");
 
         for(int i = 0; i < 12; i++){
 
-            if(ichidan[i] == 3) System.out.print("| ");
-            else System.out.print("|X");
+            if(ichidan[i] == 4) state.append("| ");
+            else state.append("|X");
 
         }
 
-        System.out.print("|\n");
+        state.append("|\n");
 
-        for(int i = 0; i < 12; i++){
-
-            if(ichidan[i] == 4) System.out.print("| ");
-            else System.out.print("|X");
-
-        }
-
-        System.out.print("|\n");
-
+        return state.toString();
     }
-
+    
 }
 
